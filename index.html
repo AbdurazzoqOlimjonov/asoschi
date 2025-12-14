@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Asoschilar</title>
+		<style>
+			/* RESET */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: system-ui, Arial, sans-serif;
+				background: #f8f8f8;
+			}
+
+			/* CONTAINER */
+			.container {
+				max-width: 1200px;
+				margin: 60px auto;
+				padding: 0 16px;
+			}
+
+			.logo-section__container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				gap: clamp(14px, 2vw, 28px);
+			}
+
+			/* ITEM */
+			.logo-section__item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 48px;
+			}
+
+			/* IMAGE BASE */
+			.logo-section__item img {
+				height: auto;
+				max-width: 100%;
+				transition: width 0.3s ease;
+			}
+
+			.logo-section__item:nth-child(1) img,
+			.logo-section__item:nth-child(4) img {
+				width: 66px;
+			}
+
+			.logo-section__item:nth-child(2) img,
+			.logo-section__item:nth-child(5) img {
+				width: 164px;
+			}
+
+			.logo-section__item:nth-child(3) img,
+			.logo-section__item:nth-child(6) img {
+				width: 84px;
+			}
+
+			@media (max-width: 1366px) {
+				.logo-section__item:nth-child(2) img,
+				.logo-section__item:nth-child(5) img {
+					width: 150px;
+				}
+			}
+
+			@media (max-width: 1024px) {
+				.logo-section__item:nth-child(1) img,
+				.logo-section__item:nth-child(4) img {
+					width: 56px;
+				}
+
+				.logo-section__item:nth-child(2) img,
+				.logo-section__item:nth-child(5) img {
+					width: 130px;
+				}
+
+				.logo-section__item:nth-child(3) img,
+				.logo-section__item:nth-child(6) img {
+					width: 74px;
+				}
+			}
+
+			@media (max-width: 430px) {
+				.logo-section__item:nth-child(1) img,
+				.logo-section__item:nth-child(4) img {
+					width: 48px;
+				}
+
+				.logo-section__item:nth-child(2) img,
+				.logo-section__item:nth-child(5) img {
+					width: 110px;
+				}
+
+				.logo-section__item:nth-child(3) img,
+				.logo-section__item:nth-child(6) img {
+					width: 64px;
+				}
+			}
+
+			@media (max-width: 390px) {
+				.logo-section__item:nth-child(2) img,
+				.logo-section__item:nth-child(5) img {
+					width: 96px;
+				}
+			}
+
+			@media (max-width: 360px) {
+				.logo-section__item:nth-child(1) img,
+				.logo-section__item:nth-child(4) img {
+					width: 42px;
+				}
+
+				.logo-section__item:nth-child(2) img,
+				.logo-section__item:nth-child(5) img {
+					width: 90px;
+				}
+
+				.logo-section__item:nth-child(3) img,
+				.logo-section__item:nth-child(6) img {
+					width: 56px;
+				}
+			}
+		</style>
+		<link rel="icon" href="images/logo.svg" />
+		<!-- FONST -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet" />
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container site-header__container">
+				<a class="site-logo" href="/">
+					<img class="site-logo__img" src="images/header/logo.svg" alt="logo" width="102" height="36" />
+				</a>
+
+				<nav class="sitenav">
+					<ul class="sitenav__list">
+						<li class="sitenav__item">
+							<a class="sitenav__link" href="#">Xizmatlar</a>
+						</li>
+						<li class="sitenav__item">
+							<a class="sitenav__link" href="#">Biz haqimizda</a>
+						</li>
+						<li class="sitenav__item">
+							<a class="sitenav__link" href="#">Natijalar</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="#konsultatsiya" class="btn hero__btn">Konsultatsiyaga yozilish</a>
+			</div>
+		</header>
+
+		<main class="main-content">
+			<section class="hero">
+				<div class="container hero__container">
+					<div class="hero__info">
+						<div class="hero__inner">
+							<h2 class="hero__title">Siz strategiyani o’ylang Tizimni biz hal qilamiz!</h2>
+							<p class="hero__text">
+								Tizimlashtirish orqali har kunlik muammolar bilan ovora bo‘lish o‘rniga, biznesingizni rivojlantirishga vaqt
+								ajrating.
+							</p>
+						</div>
+						<a href="#konsultatsiya" class="sbnm hero__btn btn">Konsultatsiyaga yozilish</a>
+					</div>
+
+					<div class="hero__img-wrapper">
+						<img class="hero__img" src="images/hero/person.png" alt="person" width="261" height="305" />
+					</div>
+				</div>
+			</section>
+
+			<!-- LOGO_SECTION -->
+			<section class="logo-section">
+				<div class="container logo-section__container">
+					<div class="logo-section__item">
+						<img src="images/logo-section-1.svg" alt="logo1" />
+					</div>
+
+					<div class="logo-section__item">
+						<img src="images/logo-section-2.svg" alt="logo2" />
+					</div>
+
+					<div class="logo-section__item">
+						<img src="images/logo-section-3.svg" alt="logo3" />
+					</div>
+
+					<div class="logo-section__item">
+						<img src="images/logo-section-4.svg" alt="logo4" />
+					</div>
+
+					<div class="logo-section__item">
+						<img src="images/logo-section-5.svg" alt="logo5" />
+					</div>
+
+					<div class="logo-section__item">
+						<img src="images/logo-section-6.svg" alt="logo6" />
+					</div>
+				</div>
+			</section>
+
+			<!-- services -->
+			<section id="hizmatlar" class="services">
+				<div class="container">
+					<div class="services__content">
+						<div class="services__intro">
+							<div class="services__badge">
+								<img src="images/services/crown.svg" alt="crown" width="16" height="16" />
+								<span>Xizmatlarimiz</span>
+							</div>
+							<h1 class="services__title">
+								Tizim bo'lmasa rivojlanish to'xtab qoladi. Biz sizga quyidagi yo'nalishlarda amaliy yordam beramiz.
+							</h1>
+						</div>
+						<div class="services__cards">
+							<div class="services__card">
+								<div class="services__icon services__icon--management">
+									<!-- Management Icon SVG -->
+									<img src="images/services/lightning-icon.svg" alt="lightning-icon" width="24" height="24" />
+								</div>
+								<div class="services__card-content">
+									<h2 class="services__card-title">Umumiy boshqaruvni tizimlashtirish</h2>
+									<ul class="services__list">
+										<li>Tashkiliy struktura (Org. struktura)</li>
+										<li>Ichki reglamentlar va tartiblar</li>
+										<li>Ish stansalari</li>
+										<li>Hisobot tizimi</li>
+									</ul>
+								</div>
+							</div>
+							<div class="services__card">
+								<div class="services__icon services__icon--sales">
+									<!-- Sales Icon SVG -->
+									<img src="images/services/sales-department.svg" alt="sales-department" width="24" height="24" />
+								</div>
+								<div class="services__card-content">
+									<h2 class="services__card-title">Sotuv bo'limi</h2>
+									<ul class="services__list">
+										<li>CRM tizimini biznesingizga moslashtirish</li>
+										<li>Sotuv varakaini ishlab chiqish</li>
+										<li>Skriptlar va sotuv algoritmlarini yaratish</li>
+									</ul>
+								</div>
+							</div>
+							<div class="services__card">
+								<div class="services__icon services__icon--hr">
+									<!-- HR Icon SVG -->
+									<img src="images/services/hr.svg" alt="hr-icon" width="20" height="20" />
+								</div>
+								<div class="services__card-content">
+									<h2 class="services__card-title">HR bo'limi</h2>
+									<ul class="services__list">
+										<li>Xodimlar uchun aniq reglamentlar</li>
+										<li>KPI asosida oylik tizimi</li>
+										<li>Ishga olish varakaini (bosqichma-bosqich jarayon)</li>
+										<li>Yangi xodimlar uchun onbor dasturi</li>
+									</ul>
+								</div>
+							</div>
+							<div class="services__card">
+								<div class="services__icon services__icon--marketing">
+									<!-- Marketing Icon SVG -->
+									<img src="images/services/marketing.svg" alt="marketing" width="20" height="20" />
+								</div>
+								<div class="services__card-content">
+									<h2 class="services__card-title">Marketing bo'limi</h2>
+									<ul class="services__list">
+										<li>Reklam asosida biznesi boshlangich</li>
+										<li>Kontent plan bilan ishlash va nazorat tizimi</li>
+									</ul>
+								</div>
+							</div>
+							<div class="services__card">
+								<div class="services__icon services__icon--legal">
+									<!-- Legal Icon SVG -->
+									<img src="images/services/legal-aid.svg" alt="legal-aid" width="20" height="20" />
+								</div>
+								<div class="services__card-content">
+									<h2 class="services__card-title">Yuridik yordam</h2>
+									<ul class="services__list">
+										<li>Kompaniyani ochish va faoliyatni yo'naltish</li>
+										<li>Xodimlarni rasmiy ishga olish hujjatlari</li>
+										<li>Tijoriy shartnomalarni olish va yuritish kelishuvlari</li>
+										<li>Kompaniya va xizmat ko'rsatish shartnomasi</li>
+										<li>Soliq yukini optimallashtirish</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- qadriyat -->
+
+			<section class="qadriyat">
+				<div class="container qadriyat__container">
+					<div class="qadriyat__top">
+						<ul class="qadriyat__top-list">
+							<li class="qadriyat__top-item">
+								<img src="images/cup.svg" alt="cup" />
+							</li>
+							<li class="qadriyat__top-item">
+								<p class="qadriyat__top-text">Bizning qadriyatlarimiz?</p>
+							</li>
+						</ul>
+						<h3 class="qadriyat__top-title">Nega aynan biz?</h3>
+					</div>
+					<ul class="qadriyat__list">
+						<li class="qadriyat__item">
+							<div class="qadriyat__img-wrapper">
+								<div class="qadriyat__item-img">
+									<div class="qadriyat__img-wrapper">
+										<img src="images/briefcase.svg" alt="briefcase" width="20" height="20" />
+									</div>
+								</div>
+							</div>
+							<h2 class="qadriyat__item-title">Expert ko’magi</h2>
+							<p class="qadriyat__item-text">Har bir loyihada Ravshan Turg‘unov shaxsan ishtirok etadi.</p>
+						</li>
+						<li class="qadriyat__item">
+							<div class="qadriyat__img-wrapper">
+								<div class="qadriyat__item-img">
+									<div class="qadriyat__img-wrapper">
+										<img src="images/verify.svg" alt="briefcase" width="20" height="20" />
+									</div>
+								</div>
+							</div>
+							<h2 class="qadriyat__item-title">Sifat va fokus</h2>
+							<p class="qadriyat__item-text">Bir vaqtning o‘zida maksimal 2 tadan ortiq loyiha bilan shug’illanmaydi.</p>
+						</li>
+						<li class="qadriyat__item">
+							<div class="qadriyat__img-wrapper">
+								<div class="qadriyat__item-img">
+									<div class="qadriyat__img-wrapper">
+										<img src="images/qalam.svg" alt="briefcase" width="20" height="20" />
+									</div>
+								</div>
+							</div>
+							<h2 class="qadriyat__item-title">Individual yondashuv</h2>
+							<p class="qadriyat__item-text">Tayyor shablonlar emas, sizga mos individual tizim ishlab chiqamiz.</p>
+						</li>
+					</ul>
+					<div class="qadriyat__btn-wrapper">
+						<a href="#konsultatsiya" class="btn">Konsultatsiyaga yozilish</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- supper -->
+
+			<section class="super">
+				<div class="container">
+					<div class="site__top">
+						<ul class="qadriyat__top-list">
+							<li class="qadriyat__top-item">
+								<img src="images/kubik.svg" alt="cup" />
+							</li>
+							<li class="qadriyat__top-item">
+								<p class="qadriyat__top-text natija">Natijalar gapiradi</p>
+							</li>
+						</ul>
+						<h3 class="qadriyat__top-title">Amalga oshirilgan loyihalar</h3>
+					</div>
+					<div id="image-slider" class="splide">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide">
+									<div class="splide__inner">
+										<img class="splide__img" src="images/super.webp" alt="Supermiya logotipi" width="512" height="384" />
+										<h2 class="splide__title">Supermiya</h2>
+										<p class="splide__text">
+											Xotirani rivojlantirish markazi uchun ichki boshqaruv tartibiga tizim joriy etildi o‘tildi.
+										</p>
+									</div>
+								</li>
+
+								<li class="splide__slide">
+									<div class="splide__inner">
+										<img class="splide__img" src="images/nmadiri.webp" alt="Print Well dizayn rasmi" />
+										<h2 class="splide__title">Print Well</h2>
+										<p class="splide__text">
+											Yirik tipografiya markazi. Reglamentsiz muhitdan to‘liq CRM va hisobotli tizimga o‘tildi.
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="responsive">
+							<ul class="splide__list">
+								<li class="splide__slide">
+									<div class="splide__inner">
+										<img class="splide__img" src="images/super.webp" alt="Supermiya logotipi" width="512" height="384" />
+										<h2 class="splide__title">Supermiya</h2>
+										<p class="splide__text">
+											Xotirani rivojlantirish markazi uchun ichki boshqaruv tartibiga tizim joriy etildi o‘tildi.
+										</p>
+									</div>
+								</li>
+
+								<li class="splide__slide">
+									<div class="splide__inner">
+										<img class="splide__img" src="images/nmadiri.webp" alt="Print Well dizayn rasmi" />
+										<h2 class="splide__title">Print Well</h2>
+										<p class="splide__text">
+											Yirik tipografiya markazi. Reglamentsiz muhitdan to‘liq CRM va hisobotli tizimga o‘tildi.
+										</p>
+									</div>
+								</li>
+							</ul>
+							<div class="show-more-section nonne">
+								<a href="#konsultatsiya" class="show-more-btn" onclick="loadMoreTestimonials()">
+									Ko'proq ko'rish
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M4 6L8 10L12 6"
+											stroke="currentColor"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="statistics-section">
+				<div class="container">
+					<h2 class="section-title">Biz raqamlarga ishonamiz!</h2>
+
+					<div class="stats-grid">
+						<div class="stat-card">
+							<div class="stat-number">10+</div>
+							<p class="stat-description">Muvaffaqiyatli yakunlangan loyihalarimiz</p>
+						</div>
+
+						<div class="stat-card">
+							<div class="stat-number">2 yil</div>
+							<p class="stat-description">Loyihalar bilan ishlashda tajriba</p>
+						</div>
+
+						<div class="stat-card">
+							<div class="stat-number">5 yil</div>
+							<p class="stat-description">Boshqaruv bo'yicha real loyihalarda tajriba</p>
+						</div>
+
+						<div class="stat-card">
+							<div class="stat-number">6</div>
+							<p class="stat-description">Tajribali mutaxassislardan tashkil topgan jamoa</p>
+						</div>
+					</div>
+
+					<div class="cta-section">
+						<a href="#konsultatsiya" class="btn consultation-btn">Konsultatsiyaga yozilish</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="testimonials-section" id="natija">
+				<div class="container testimonials-container">
+					<!-- Section Header -->
+					<div class="section-header">
+						<div class="header-badge">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M10 3.92016L9.33337 6.66683H13.22C13.427 6.66683 13.6312 6.71502 13.8163 6.80759C14.0015 6.90016 14.1625 7.03457 14.2867 7.20016C14.4109 7.36576 14.4948 7.55799 14.5319 7.76165C14.5689 7.9653 14.558 8.17478 14.5 8.3735L12.9467 13.7068C12.8659 13.9838 12.6975 14.2271 12.4667 14.4002C12.2359 14.5733 11.9552 14.6668 11.6667 14.6668H2.66671C2.31309 14.6668 1.97395 14.5264 1.7239 14.2763C1.47385 14.0263 1.33337 13.6871 1.33337 13.3335V8.00016C1.33337 7.64654 1.47385 7.3074 1.7239 7.05735C1.97395 6.80731 2.31309 6.66683 2.66671 6.66683H4.50671C4.75476 6.6667 4.99786 6.59737 5.20868 6.46664C5.41949 6.33592 5.58966 6.14897 5.70004 5.92683L8.00004 1.3335C8.31443 1.33739 8.62387 1.41228 8.90524 1.55256C9.18662 1.69284 9.43266 1.8949 9.62498 2.14363C9.81729 2.39236 9.95092 2.68134 10.0159 2.98896C10.0808 3.29659 10.0754 3.61492 10 3.92016Z"
+									stroke="#0F172A"
+									stroke-width="1.2"
+									stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span>Fikrlar</span>
+						</div>
+						<h2 class="section-title-2">Mijozlardan samimiy fikrlar</h2>
+					</div>
+
+					<!-- Testimonials Grid -->
+					<div class="testimonials-grid">
+						<!-- Testimonial 1 -->
+						<div class="testimonial-card">
+							<div class="testimonial-content">
+								<div class="quote-icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M3 21C3 17.4 3 15.6 4.2 14.4C5.4 13.2 7.2 13.2 10.8 13.2H13.2C16.8 13.2 18.6 13.2 19.8 14.4C21 15.6 21 17.4 21 21"
+											stroke="currentColor"
+											stroke-width="1.5" />
+										<path
+											d="M7 8C7 5.2 9.2 3 12 3S17 5.2 17 8 14.8 13 12 13 7 10.8 7 8Z"
+											stroke="currentColor"
+											stroke-width="1.5" />
+									</svg>
+								</div>
+							</div>
+							<div class="customer-info">
+								<div class="customer-avatar">
+									<img src="images/ako-1.webp" alt="Sherzod Darxonov" class="avatar-image" />
+								</div>
+								<div class="customer-details">
+									<h2 class="testimonial-text">
+										"Biznesimda kim nima qilayotgani aniq bo'ldi. Hozir har kim mas'uliyatini biladi."
+									</h2>
+									<div class="customer-position">— G’ulomjon Mansurov, Print Well kompaniyasi asoschisi</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Testimonial 2 -->
+						<div class="testimonial-card">
+							<div class="testimonial-content">
+								<div class="quote-icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M3 21C3 17.4 3 15.6 4.2 14.4C5.4 13.2 7.2 13.2 10.8 13.2H13.2C16.8 13.2 18.6 13.2 19.8 14.4C21 15.6 21 17.4 21 21"
+											stroke="currentColor"
+											stroke-width="1.5" />
+										<path
+											d="M7 8C7 5.2 9.2 3 12 3S17 5.2 17 8 14.8 13 12 13 7 10.8 7 8Z"
+											stroke="currentColor"
+											stroke-width="1.5" />
+									</svg>
+								</div>
+							</div>
+							<div class="customer-info">
+								<div class="customer-avatar">
+									<img src="images/ako-2.webp" alt="Sherzod Darxonov" class="avatar-image" />
+								</div>
+								<div class="customer-details">
+									<h2 class="testimonial-text">
+										"Biznesimda kim nima qilayotgani aniq bo'ldi. Hozir har kim mas'uliyatini biladi."
+									</h2>
+									<div class="customer-position">— Abdulloh Yusupov, Dodo kids kompaniyasi asoschisi</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Testimonial 3 -->
+						<div class="testimonial-card">
+							<div class="testimonial-content">
+								<div class="quote-icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M3 21C3 17.4 3 15.6 4.2 14.4C5.4 13.2 7.2 13.2 10.8 13.2H13.2C16.8 13.2 18.6 13.2 19.8 14.4C21 15.6 21 17.4 21 21"
+											stroke="currentColor"
+											stroke-width="1.5" />
+										<path
+											d="M7 8C7 5.2 9.2 3 12 3S17 5.2 17 8 14.8 13 12 13 7 10.8 7 8Z"
+											stroke="currentColor"
+											stroke-width="1.5" />
+									</svg>
+								</div>
+							</div>
+							<div class="customer-info">
+								<div class="customer-avatar">
+									<img src="images/ako-3.webp" alt="Sherzod Darxonov" class="avatar-image" />
+								</div>
+								<div class="customer-details">
+									<h2 class="testimonial-text">
+										"Biznesimda kim nima qilayotgani aniq bo'ldi. Hozir har kim mas'uliyatini biladi."
+									</h2>
+									<div class="customer-position">Sherzod Darxonov Foggi do'konlari CEO'si</div>
+								</div>
+							</div>
+						</div>
+						<div class="show-more-section">
+							<a href="#konsultatsiya" class="show-more-btn" onclick="loadMoreTestimonials()">
+								Ko'proq ko'rish
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M4 6L8 10L12 6"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Show More Button -->
+				</div>
+			</section>
+
+			<section id="konsultatsiya" class="konsultatsiya">
+				<div class="container konsultatsiya-container">
+					<div class="left-section">
+						<div class="contact-link">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round">
+								<path
+									d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+							</svg>
+							<a class="form-link" href="tel:xx-xxx-xx-xx"><span>Biz bilan bog'laning</span></a>
+						</div>
+						<h1 class="title">Konsultatsiyaga yoziling va biznesingizni tizimlashtiring</h1>
+					</div>
+					<div class="right-section">
+						<div class="form-container">
+							<form name="asoschilar" id="asoschilarForm">
+								<div class="form-group">
+									<label for="name">Ism</label>
+									<input name="ism" type="text" id="name" placeholder="To'liq ismingiz" required />
+								</div>
+								<div class="form-group">
+									<label for="phone">Telefon raqam</label>
+									<input name="telefon" type="tel" id="phone" placeholder="+998 __ ___ __ __" required />
+								</div>
+								<div class="form-group">
+									<label for="company">Kompaniyangiz</label>
+									<input name="kompaniya" type="text" id="company" placeholder="Kompaniya nomi" />
+								</div>
+
+								<button type="submit" class="submit-btn" id="submitBtn">
+									<span id="btnText">Konsultatsiyaga yozilish</span>
+									<span id="btnLoader" style="display: none">⏳</span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<!-- Logo and Copyright Section -->
+				<div class="footer-left">
+					<a href="/"> <img class="footer-left-img" src="images/header/logo.svg" alt="site-footer-img" /></a>
+					<div class="copyright">©2025 Barcha huquqlar himoyalangan.</div>
+				</div>
+
+				<!-- Links Section -->
+				<div class="footer-center">
+					<h3 class="footer-center-title">Linklar</h3>
+					<ul class="footer-links">
+						<li class="footer-center-item"><a href="#about">Biz haqimizda</a></li>
+						<li class="footer-center-item"><a href="#services">Xizmatlar</a></li>
+						<li class="footer-center-item"><a href="#consultation">Konsultatsiya</a></li>
+					</ul>
+				</div>
+
+				<!-- Contact Section -->
+				<div class="footer-right">
+					<h3>Bog'lanish</h3>
+					<ul class="contact-list">
+						<li class="contact-item">
+							<img src="images/tel.svg" alt="tel-icon" width="20" height="20" />
+							<a href="tel:+998998427979">+998 99 842 79 79</a>
+						</li>
+						<li class="contact-item">
+							<img src="images/email.svg" alt="email-icon" width="20" height="20" />
+							<a href="mailto:info@asoschlar.uz">info@asoschlar.uz</a>
+						</li>
+						<li class="contact-item">
+							<img src="images/telegram.svg" alt="telegram-icon" width="20" height="20" />
+							<a href="https://t.me/asoschlar_bot" target="_blank">@asoschlar_bot</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			const scriptURL =
+				'https://script.google.com/macros/s/AKfycbwO_36CCfYHWyBYoFE2g-Y-s7O0PBWcktNaA2pu984VITpB7_VpKiHkGX1RlKQPxELvrA/exec';
+			const form = document.forms['asoschilar'];
+			const submitBtn = document.getElementById('submitBtn');
+			const btnText = document.getElementById('btnText');
+			const btnLoader = document.getElementById('btnLoader');
+
+			form.addEventListener('submit', e => {
+				e.preventDefault();
+
+				// Tugmada yuklanmoqda animatsiyasi
+				btnText.style.display = 'none';
+				btnLoader.style.display = 'inline';
+
+				fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+					.then(response => {
+						// Formani tozalash
+						form.reset();
+
+						// Tugma holatini qayta tiklash
+						btnText.style.display = 'inline';
+						btnLoader.style.display = 'none';
+
+						// Xabar chiqarish (oddiy alert, xohlasangiz modal qilish mumkin)
+						alert("Ma'lumot muvaffaqiyatli yuborildi!");
+					})
+					.catch(error => {
+						btnText.style.display = 'inline';
+						btnLoader.style.display = 'none';
+						alert('Xatolik yuz berdi: ' + error.message);
+					});
+			});
+		</script>
+	</body>
+</html>
